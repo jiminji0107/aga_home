@@ -1,59 +1,77 @@
-/* 전체 컨테이너 스타일 */
+/* 전체 컨테이너 */
 .container {
-  background-color: #F2F2F2; /* 밝은 배경색 */
-  font-family: 'Arial', sans-serif; /* 폰트 변경 */
-  color: #333; /* 텍스트 색상 */
-  padding: 20px;
-  text-align: center;
+  background-color: #f2f2f2;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  /* 수직 방향으로 위->아래 배치 */
+  /* 수직 공간이 남으면 푸터를 밑으로 밀기 */
 }
 
-/* 헤더 스타일 */
+/* 헤더 영역 */
 .header {
-  margin-bottom: 20px;
+  width: 100%;
+  max-width: 800px; /* 본문 폭 제한 */
+  margin: 20px auto;
+  text-align: center;
 }
-
 .logo {
-  width: 150px; /* 로고 크기 */
+  width: 120px;
+  height: auto;
   margin-bottom: 10px;
 }
-
-h1 {
+.header h1 {
+  margin: 10px 0 5px;
   font-size: 2rem;
-  font-weight: bold;
+}
+.header h2 {
+  font-size: 1.2rem;
+  color: #666;
 }
 
-h2 {
-  font-size: 1.5rem;
-  color: #555;
-  margin-top: 5px;
+/* 메인 컨텐츠 */
+.main-content {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
 }
-
-/* 설명 텍스트 */
+.main-content h3 {
+  margin: 10px 0;
+  font-size: 1.3rem;
+}
 .description {
-  font-size: 1.1rem;
+  font-size: 1rem;
   line-height: 1.6;
   margin: 10px 0;
-  max-width: 600px;
+  color: #333;
 }
 
-/* 버튼 스타일 */
-.back-button {
+/* 돌아가기 링크 */
+.back-link {
+  display: inline-block;
   margin-top: 20px;
-  padding: 10px 20px;
-  font-size: 1rem;
+  padding: 8px 16px;
+  background-color: #007bff; /* 파란색 */
   color: #fff;
-  background-color: #007BFF; /* 파란색 버튼 */
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
+  text-decoration: none;
+  border-radius: 4px;
   transition: background-color 0.3s;
 }
+.back-link:hover {
+  background-color: #0056b3;
+}
 
-.back-button:hover {
-  background-color: #0056b3; /* 호버 효과 */
+/* 푸터 */
+.footer {
+  width: 100%;
+  max-width: 800px;
+  margin: auto;
+  text-align: center;
+  padding: 10px;
+  color: #888;
+  font-size: 0.9rem;
+  margin-bottom: 20px; /* 푸터와 페이지 끝 사이 여백 */
 }
